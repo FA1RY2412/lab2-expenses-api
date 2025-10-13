@@ -84,7 +84,8 @@ Plan: Free
 - Environment (Local і Production)
 - Посилання:
   - GitHub репозиторій: https://github.com/FA1RY2412/lab2-expenses-api
-  - Render Deployment: https://<твій_сервіс>.onrender.com
-  - Healthcheck: https://<твій_сервіс>.onrender.com/healthcheck
-
+  - Render Deployment: [lab2-expenses-api.onrender.com](https://lab2-expenses-api.onrender.com/)
+  - Healthcheck: [lab2-expenses-api.onrender.com/healthcheck](https://lab2-expenses-api.onrender.com/healthcheck)
+  - Users: [lab2-expenses-api.onrender.com/healthcheck](https://lab2-expenses-api.onrender.com/users)
+  - Category [https://lab2-expenses-api.onrender.com/category](https://lab2-expenses-api.onrender.com/category)
 ---
