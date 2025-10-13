@@ -65,11 +65,11 @@ Plan: Free
 ---
 
 ## Тестування у Postman
-1. Імпортувати колекцію `ExpenseTracker.postman_collection.json`
-2. Імпортувати середовища:
+1. Імпортував колекцію `ExpenseTracker.postman_collection.json`
+2. Імпортував середовища:
    - `env/local.postman_environment.json`
    - `env/prod.postman_environment.json`
-3. Виконати запити у порядку:
+3. Виконав запити у порядку:
    - Healthcheck  
    - Create user  
    - Create category  
