@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Expenses Lab2 API",
+    "_postman_id": "b66c8d20-aaaa-bbbb-cccc-ddddeeeffff1",
+    "description": "Колекція запитів для лабораторної 2 (Expenses API).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Healthcheck",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/healthcheck"
+      }
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Charlie\"}"
+            },
+            "url": "{{base_url}}/user"
+          }
+        },
+        {
+          "name": "Get users list",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/users"
+          }
+        },
+        {
+          "name": "Get user by id",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/user/{{user_id}}"
+          }
+        },
+        {
+          "name": "Delete user by id",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/user/{{user_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "List categories",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/category"
+          }
+        },
+        {
+          "name": "Create category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Food\"}"
+            },
+            "url": "{{base_url}}/category"
+          }
+        },
+        {
+          "name": "Delete category by id (path)",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/category/{{category_id}}"
+          }
+        },
+        {
+          "name": "Delete category by id (query)",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/category",
+            "urlencoded": [
+              {
+                "key": "id",
+                "value": "{{category_id}}"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Records",
+      "item": [
+        {
+          "name": "Create record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"user_id\": 1, \"category_id\": 1, \"amount\": 12.5}"
+            },
+            "url": "{{base_url}}/record"
+          }
+        },
+        {
+          "name": "Get record by id",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/record/{{record_id}}"
+          }
+        },
+        {
+          "name": "Delete record by id",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/record/{{record_id}}"
+          }
+        },
+        {
+          "name": "List records by user_id",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/record?user_id={{user_id}}"
+          }
+        },
+        {
+          "name": "List records by category_id",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/record?category_id={{category_id}}"
+          }
+        },
+        {
+          "name": "List records by user_id & category_id",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/record?user_id={{user_id}}&category_id={{category_id}}"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
